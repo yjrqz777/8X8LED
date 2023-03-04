@@ -1,3 +1,5 @@
+#touch .gitignore
+
 /MDK-ARM/3/*
 !/MDK-ARM/3/3.hex
 !/MDK-ARM/3/11111
