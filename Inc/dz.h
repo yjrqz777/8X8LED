@@ -7,14 +7,16 @@
 
 #include "main.h"
 
+#define A_num 9
 
+#define B_num 7
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-extern uint16_t high[8];
-extern uint16_t low[8];
+extern uint16_t gpio_A[A_num];
+extern uint16_t gpio_B[B_num];
 /* USER CODE END Private defines */
 extern double i3;
 
@@ -40,10 +42,15 @@ void R88_off();
 void R88_row_flush();
 void R88_col_flush();
 
-void R88_show_img(int arr[]);
-void scan(int arr[8][8]);
-void Display(int dat[8][8],int s);
-void Display2(int dat[8][8],int s);
+void R88_show_img(char arr[]);
+void scan(char arr[8][8]);
+void Display(char dat[8][8]);
+void Display2(char dat[8][8],int s);
+void Display_plus(char dat[8][8],int s,int times);   //显示函数
+
+void fillBinaryArray(char binaryArray[][8], int n);
+
+
 void Clear();
 /* USER CODE BEGIN Prototypes */
 

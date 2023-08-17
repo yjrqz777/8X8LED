@@ -42,6 +42,9 @@ typedef enum
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define B1 HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9)
+
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,6 +60,12 @@ uint8_t KEY_Value=0;
 KEY_State KeyState=KEY_Check;
 uint8_t KEY_Flag = 0;
 uint32_t KEY_Press_TIME=20;	
+
+
+char zero[8][8]={0};
+int flag_z=0;
+int flag_zz=0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -106,12 +115,34 @@ int main(void)
   /* USER CODE END 2 */
 //R88_row_flush();//刷新行
 //R88_col_flush();//刷新列
-//R88_off();//关闭所有
+R88_off();//关闭所有
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+//		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,1);
+//		R88_off();
+		
+//		Display(biglove,1);
+//		HAL_Delay(100);
+//		Display(biglove,0);
+//		HAL_Delay(100);
+//		Display(smalllove,1);
+//		HAL_Delay(100);
+//		Display(smalllove,0);
+//		HAL_Delay(100);
+//		Display(twelve,1);
+//		HAL_Delay(100);
+//		Display(twelve,0);
+//		HAL_Delay(100);
+//		Display(q_min,1);
+//		HAL_Delay(100);
+//		Display(q_min,0);
+//		HAL_Delay(100);
+//		Display(as,1);
+//		HAL_Delay(100);
+//		Display(as,0);
+//		HAL_Delay(100);
 		if(KEY_Flag==1)
 		{
 			KEY_Flag=0;
@@ -119,82 +150,50 @@ int main(void)
 			else if((KEY_Value==1)&&(KEY_Press_TIME>1200)){data=99;HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);}
 			KEY_Press_TIME=20;
 		}	
+		//##################心
 		if(data==0)
 		{
-			//R88_show_img(Small_Arr2);
-				Display(biglove,1);
+
+
+			// disply_z();
+			// Display_plus(biglove,1,20);
+			data++;
 		}
-		if(data==1)
-		{
-        i3=20;
-			//R88_show_img(Small_Arr2);
-				Display(biglove,0);
-		}
-		
-		
-		//##################小心
+		if(data==1) Display(zero);
+
+		//################## 小心
 		if(data==2)
 		{
-				Display(smalllove,1);
+			Display_plus(smalllove,1,20);
+			data++;
 		}
-		if(data==3)
-		{
-		i3=20;
-		Display(smalllove,0);
-		}
-		
-		
-		
-		//##################12
+		if(data==3) Display(smalllove);
+
+		//################## 12
 		if(data==4)
 		{
-			Display(twelve,1);
+			Display_plus(twelve,1,30);
+			data++;
 		}
-		if(data==5)
-		{
-		i3=20;
-		Display(twelve,0);
-		}
-		
-		
-		
-		//##################12
+		if(data==5) Display(twelve);
+
+		//################## 0101
 		if(data==6)
 		{
-			Display(q_min,1);
+			Display_plus(q_min,1,20);
+			data++;
 		}
-		if(data==7)
-		{
-			Display(q_min,1);
-		}
-		
-		
-		
-		
+		if(data==7) Display(q_min);
+
+		//################## FF
 		if(data==8)
 		{
-		i3=20;
-		Display(q_max,0);
+			Display_plus(q_max,1,20);
+			data++;
 		}
-		if(data==9)
-		{
-		Display(q_max,1);
-		}
-		
-		
-		
-		if(data==10)
-		{
-		//i3=20;
-		Display(biglove,1);
-		HAL_Delay(100);
-		//i3=20;
-		Display(smalllove,1);
-		HAL_Delay(100);
-		//i3=20;
-		Display(twelve,1);
-		
-		}
+		if(data==9) Display(q_max);
+
+
 		if(data==11)
 		{
 			R88_on();
@@ -202,14 +201,11 @@ int main(void)
 			R88_off();
 			HAL_Delay(100);
 		}
-		if(data==12)
-		{
-		data=0;
-		}
-		if(data==99)
-		{
-			Display(as,0);
-		}
+		if(data==12)data=0;
+		if(data==99) Display(as);
+
+		if(data==100)data=0;
+		if(data==101)data=0;
 //		else
 //		{
 //			Display(biglove,1);

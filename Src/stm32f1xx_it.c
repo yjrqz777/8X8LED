@@ -182,6 +182,16 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
+	// static int time=0;
+  // if(++time==5)
+  // {
+  //   flag_z=1;
+  //   time=0;
+  // }
+	
+	
+	
+	
 
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();

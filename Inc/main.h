@@ -37,7 +37,9 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern char zero[8][8];
+extern int flag_z;
+extern int flag_zz;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
