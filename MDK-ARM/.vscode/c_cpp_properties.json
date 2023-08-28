@@ -3,14 +3,15 @@
         {
             "name": "3",
             "includePath": [
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Inc",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Drivers\\CMSIS\\Include",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Src",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Src",
-                "e:\\文档\\stm32f103c6\\8x8led\\3\\MDK-ARM"
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Inc",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Drivers\\CMSIS\\Include",
+                "F:\\keil\\mdk\\ARM\\ARMCC\\include",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Src",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\Drivers\\STM32F1xx_HAL_Driver\\Src",
+                "e:\\Documents\\stm32f103c6\\8x8led\\3\\MDK-ARM"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

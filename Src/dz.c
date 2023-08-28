@@ -98,6 +98,54 @@ void Clear()                          //清空显示
 double i3=50;
 
 
+
+void circle()
+{
+  int i=0;
+  // for (int i = 0; i < 8; i++)
+  // {
+  //   R88_col_control(i,0);
+  //   R88_row_control(i,1);
+  //   HAL_Delay(100);
+  //   Clear();
+  // }
+  for (i = 6; i >= 0; i--)
+  {
+    R88_col_control(7,0);
+    R88_row_control(i,1);
+    HAL_Delay(100);
+    Clear();
+  }
+  for (i = 6; i >= 0; i--)
+  {
+    R88_col_control(i,0);
+    R88_row_control(0,1);
+    HAL_Delay(100);
+    Clear();
+  }
+  for (int i = 1; i < 8; i++)
+  {
+    R88_col_control(0,0);
+    R88_row_control(i,1);
+    HAL_Delay(100);
+    Clear();
+  }
+  for (int i = 1; i < 8; i++)
+  {
+    R88_col_control(i,0);
+    R88_row_control(7,1);
+    HAL_Delay(100);
+    Clear();
+  }
+  // for (int i = 6; i > 0; i--)
+  // {
+  //   R88_col_control(i,0);
+  //   R88_row_control(i,1);
+  //   HAL_Delay(100);
+  //   Clear();
+  // }
+}
+
 void Display(char dat[8][8])   //显示函数
 {
   for(int c = 0; c<8;c++)

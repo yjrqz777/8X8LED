@@ -32,9 +32,9 @@
 /* USER CODE BEGIN PTD */
 typedef enum
 {
-	KEY_Check,			//°´¼ü¼ì²â
-	KEY_Press,			//°´¼ü°´ÏÂ
-	KEY_Release,		//°´¼üÊÍ·Å
+	KEY_Check,			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	KEY_Press,			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	KEY_Release,		//ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½
 	Key_Over,
 }KEY_State;
 /* USER CODE END PTD */
@@ -113,9 +113,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	uint16_t data=0;
   /* USER CODE END 2 */
-//R88_row_flush();//Ë¢ÐÂÐÐ
-//R88_col_flush();//Ë¢ÐÂÁÐ
-R88_off();//¹Ø±ÕËùÓÐ
+//R88_row_flush();//Ë¢ï¿½ï¿½ï¿½ï¿½
+//R88_col_flush();//Ë¢ï¿½ï¿½ï¿½ï¿½
+R88_off();//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -150,18 +150,20 @@ R88_off();//¹Ø±ÕËùÓÐ
 			else if((KEY_Value==1)&&(KEY_Press_TIME>1200)){data=99;HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);}
 			KEY_Press_TIME=20;
 		}	
-		//##################ÐÄ
+		//##################ï¿½ï¿½
 		if(data==0)
 		{
 
 
 			// disply_z();
 			// Display_plus(biglove,1,20);
-			data++;
+			// data++;
+		circle();
+
 		}
 		if(data==1) Display(zero);
 
-		//################## Ð¡ÐÄ
+		//################## Ð¡ï¿½ï¿½
 		if(data==2)
 		{
 			Display_plus(smalllove,1,20);

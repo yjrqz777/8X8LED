@@ -1,4 +1,133 @@
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'F:\keil\mdk\ARM\ac5\Bin'
 Build target '3'
-"3\3.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:00
+compiling dz.c...
+../Inc/dz.h(39): warning:  #1295-D: Deprecated declaration R88_on - give arg types
+  void R88_on();
+../Inc/dz.h(40): warning:  #1295-D: Deprecated declaration R88_off - give arg types
+  void R88_off();
+../Inc/dz.h(42): warning:  #1295-D: Deprecated declaration R88_row_flush - give arg types
+  void R88_row_flush();
+../Inc/dz.h(43): warning:  #1295-D: Deprecated declaration R88_col_flush - give arg types
+  void R88_col_flush();
+../Inc/dz.h(54): warning:  #1295-D: Deprecated declaration Clear - give arg types
+  void Clear();
+..\Src\dz.c(79): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,c); //1
+..\Src\dz.c(80): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_14,c); //1
+..\Src\dz.c(81): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,c); //1
+..\Src\dz.c(82): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,c); //1
+..\Src\dz.c(83): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_7,c); //1
+..\Src\dz.c(84): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,c); //1
+..\Src\dz.c(85): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_6,c); //1
+..\Src\dz.c(86): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_3,c); //1
+..\Src\dz.c(89): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_15,c); //0
+..\Src\dz.c(90): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,c); //0
+..\Src\dz.c(91): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,c); //0
+..\Src\dz.c(92): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,c); //0
+..\Src\dz.c(93): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,c); //0
+..\Src\dz.c(94): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_3,c); //0
+..\Src\dz.c(95): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13,c); //0
+..\Src\dz.c(96): warning:  #188-D: enumerated type mixed with another type
+       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,c); //0
+..\Src\dz.c(114): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(7,0);
+..\Src\dz.c(115): warning:  #188-D: enumerated type mixed with another type
+      R88_row_control(i,1);
+..\Src\dz.c(121): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(i,0);
+..\Src\dz.c(122): warning:  #188-D: enumerated type mixed with another type
+      R88_row_control(0,1);
+..\Src\dz.c(128): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(0,0);
+..\Src\dz.c(129): warning:  #188-D: enumerated type mixed with another type
+      R88_row_control(i,1);
+..\Src\dz.c(135): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(i,0);
+..\Src\dz.c(136): warning:  #188-D: enumerated type mixed with another type
+      R88_row_control(7,1);
+..\Src\dz.c(153): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(c,0);//选通第c列
+..\Src\dz.c(155): warning:  #188-D: enumerated type mixed with another type
+        R88_row_control(r,dat[r][c]);
+..\Src\dz.c(167): warning:  #188-D: enumerated type mixed with another type
+        R88_col_control(c,0);//选通第c列
+..\Src\dz.c(170): warning:  #188-D: enumerated type mixed with another type
+          R88_row_control(r,dat[r][c]);
+..\Src\dz.c(187): warning:  #188-D: enumerated type mixed with another type
+      R88_col_control(c,0);
+..\Src\dz.c(190): warning:  #188-D: enumerated type mixed with another type
+        R88_row_control(r,dat[r][c]);
+..\Src\dz.c(203): warning:  #188-D: enumerated type mixed with another type
+       for(n=0;n<8;n++) R88_row_control(n,0);//关闭所有行
+..\Src\dz.c(204): warning:  #188-D: enumerated type mixed with another type
+       R88_row_control(i,1);//行移动
+..\Src\dz.c(206): warning:  #188-D: enumerated type mixed with another type
+           for(n=0;n<8;n++) R88_col_control(n,1);//关闭所有列
+..\Src\dz.c(207): warning:  #188-D: enumerated type mixed with another type
+           R88_col_control(j,0);//列移动
+..\Src\dz.c(217): warning:  #188-D: enumerated type mixed with another type
+       for(n=0;n<8;n++) R88_col_control(n,1);//关闭所有列
+..\Src\dz.c(218): warning:  #188-D: enumerated type mixed with another type
+       R88_col_control(i,0);//列移动
+..\Src\dz.c(220): warning:  #188-D: enumerated type mixed with another type
+            for(n=0;n<8;n++) R88_row_control(n,0);//关闭所有行
+..\Src\dz.c(221): warning:  #188-D: enumerated type mixed with another type
+            R88_row_control(j,1);//行移动
+..\Src\dz.c(233): warning:  #188-D: enumerated type mixed with another type
+       R88_col_control(i,0);//列移动ˉ
+..\Src\dz.c(235): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x01) R88_row_control(0,1);
+..\Src\dz.c(236): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x02) R88_row_control(1,1);
+..\Src\dz.c(237): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x04) R88_row_control(2,1);
+..\Src\dz.c(238): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x08) R88_row_control(3,1);
+..\Src\dz.c(239): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x10) R88_row_control(4,1);
+..\Src\dz.c(240): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x20) R88_row_control(5,1);
+..\Src\dz.c(241): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x40) R88_row_control(6,1);
+..\Src\dz.c(242): warning:  #188-D: enumerated type mixed with another type
+       if(arr[i]&0x80) R88_row_control(7,1);
+..\Src\dz.c(230): warning:  #177-D: variable "j"  was declared but never referenced
+     int i,j,n;
+..\Src\dz.c(230): warning:  #177-D: variable "n"  was declared but never referenced
+     int i,j,n;
+..\Src\dz.c(251): warning:  #188-D: enumerated type mixed with another type
+  	R88_col_control(i,0);
+..\Src\dz.c(255): warning:  #188-D: enumerated type mixed with another type
+  				R88_row_control(j,arr[i][j]);
+..\Src\dz.c(262): warning:  #188-D: enumerated type mixed with another type
+  	R88_col_control(i,1);
+..\Src\dz.c(263): warning:  #188-D: enumerated type mixed with another type
+  	R88_row_control(i,0);
+..\Src\dz.c(408): warning:  #188-D: enumerated type mixed with another type
+          R88_row_control(i,1);
+..\Src\dz.c(409): warning:  #188-D: enumerated type mixed with another type
+          R88_col_control(i,0);
+..\Src\dz.c(419): warning:  #188-D: enumerated type mixed with another type
+          R88_row_control(i,0);
+..\Src\dz.c(420): warning:  #188-D: enumerated type mixed with another type
+          R88_col_control(i,1);
+..\Src\dz.c: 62 warnings, 0 errors
+linking...
+Program Size: Code=3844 RO-data=284 RW-data=380 ZI-data=1092  
+FromELF: creating hex file...
+"3\3.axf" - 0 Error(s), 62 Warning(s).
+Build Time Elapsed:  00:00:03
